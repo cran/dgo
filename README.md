@@ -13,7 +13,13 @@ This model opens up new areas of research on historical public opinion in the Un
 Installation
 ============
 
-dgo can be installed from [GitHub](https://github.com/jamesdunham/dgo) using [devtools](https://github.com/hadley/devtools/):
+dgo can be installed from CRAN:
+
+``` r
+install.packages("dgo")
+```
+
+Or get the latest version from [GitHub](https://github.com/jamesdunham/dgo) using [devtools](https://github.com/hadley/devtools/):
 
 ``` r
 if (!require(devtools, quietly = TRUE)) install.packages("devtools")
@@ -45,15 +51,11 @@ Troubleshooting
 
 Please [report issues](https://github.com/jamesdunham/dgo/issues) that you encounter.
 
-OS X only: RStan creates temporary files during estimation in a location given by [`tempdir()`](https://www.rdocumentation.org/packages/base/versions/3.4.0/topics/tempfile), typically an arbitrary location in `/var/folders`. If a model runs for days, these files can be cleaned up while still needed, which induces an error. A good solution is to set a safer path for temporary files, using an environment variable checked at session startup. For help setting environment variables, see [here](https://stackoverflow.com/questions/17107206/change-temporary-directory). Confirm the new path before starting your model run by restarting R and checking the output from [`tempdir()`](https://www.rdocumentation.org/packages/base/versions/3.4.0/topics/tempfile):
+-   OS X only: RStan creates temporary files during estimation in a location given by `tempdir()`, typically an arbitrary location in `/var/folders`. If a model runs for days, these files can be cleaned up while still needed, which induces an error. A good solution is to set a safer path for temporary files, using an environment variable checked at session startup. For help setting environment variables, see the Stack Overflow question [here](https://stackoverflow.com/questions/17107206/change-temporary-directory). Confirm the new path before starting your model run by restarting R and checking the output from `tempdir()`.
 
-``` r
-# Problematic temporary directories on OS X look like this
-tempdir()
-#> [1] "/var/folders/2p/_d3c95qd6ljg28j1f5l2jqxm0000gn/T//Rtmp38a10A"
-```
+-   Models fitted before October 2016 (specifically &lt; [\#8e6a2cf](https://github.com/jamesdunham/dgo/commit/8e6a2cfbe00b2cd4a908b3067241e06124d143cd)) using dgirt are not fully compatible with dgo. Their contents can be extracted without using dgo, however, with the `$` indexing operator. For example: `as.data.frame(dgirtfit_object$stan.cmb)`.
 
-Models fitted before October 2016 (specifically prior to [\#8e6a2cf](https://github.com/jamesdunham/dgo/commit/8e6a2cfbe00b2cd4a908b3067241e06124d143cd)) using dgirtfit are not fully compatible with dgo. Their contents can be extracted without using dgo, however, with the `$` indexing operator. For example: `as.data.frame(dgirtfit_object$stan.cmb)`.
+-   Calling `dgirt()` or `dgmrp()` can generate [warnings](http://mc-stan.org/misc/warnings#compiler-warnings) during model compilation. These are safe to ignore, or can be suppressed by following the linked instructions.
 
 Contributing and citing
 =======================

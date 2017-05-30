@@ -1,7 +1,7 @@
 Package: dgo
 Title: Dynamic Estimation of Group-Level Opinion
-Version: 0.2.9
-Date: 2017-05-21
+Version: 0.2.10
+Date: 2017-05-29
 Description: Fit dynamic group-level IRT and MRP models from individual or
     aggregated item response data. This package handles common preprocessing
     tasks and extends functions for inspecting results, poststratification, and
@@ -17,14 +17,13 @@ URL: https://jdunham.io/dgo/
 BugReports: https://github.com/jamesdunham/dgo/issues
 Depends: dgodata, R (>= 3.2.2), rstan (>= 2.15.1)
 LazyData: true
-Imports: assertthat, data.table, ggplot2, lubridate, methods, R6, Rcpp
-        (>= 0.12.10), survey
+Imports: assertthat, data.table, ggplot2, lubridate, methods, R6,
+        survey
 Suggests: knitr, rmarkdown, testthat
-LinkingTo: Rcpp (>= 0.12.10)
 NeedsCompilation: yes
-Collate: 'RcppExports.R' 'aggregate_item_responses.r' 'assertions.r'
-        'class-control.r' 'class-dgo_fit.r' 'class-dgirt_fit.r'
-        'constants.r' 'class-dgirtin.r' 'class-dgmrp_fit.r' 'dgirt.r'
+Collate: 'aggregate_item_responses.r' 'assertions.r' 'class-control.r'
+        'class-dgo_fit.r' 'class-dgirt_fit.r' 'constants.r'
+        'class-dgirtin.r' 'class-dgmrp_fit.r' 'dgirt.r'
         'dichotomize_item_responses.r' 'expand_rownames.r'
         'methods-control.r' 'methods-dgirtfit-plot.r'
         'methods-dgirtfit-poststratify.r' 'methods-dgirtfit.r'
@@ -34,9 +33,9 @@ Collate: 'RcppExports.R' 'aggregate_item_responses.r' 'assertions.r'
         'toy_dgirt_in.r' 'toy_dgirtfit.r' 'validate_dgirtIn.r'
         'validate_input_data.r'
 RoxygenNote: 6.0.1
-Packaged: 2017-05-23 02:17:38 UTC; james
+Packaged: 2017-05-30 01:47:25 UTC; james
 Author: James Dunham [aut, cre],
   Devin Caughey [aut],
   Christopher Warshaw [aut]
 Repository: CRAN
-Date/Publication: 2017-05-23 03:39:44 UTC
+Date/Publication: 2017-05-30 15:37:00 UTC
