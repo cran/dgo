@@ -1,4 +1,16 @@
-## 0.2.10
+## dgo 0.2.11
+
+* Add poststratification over posterior samples (closes #21).
+* `shape()` now accepts aggregated item response data unaccompanied by
+  individual-level item response data. The `item_data` and `item_names`
+  arguments are no longer required.
+* Add a `max_raked_weight` argument to `shape()` for trimming raked weights.
+  Note that trimming occurs before raked weights are rescaled to have mean 1,
+  and the rescaled weights can be larger than `max_raked_weight`.
+* Remove the unused function `expand_rownames()`.
+* Bugfixes.
+
+## dgo 0.2.10
 
 * Remove Rcpp dependency by rewriting `dichotomize()` in R.
 * Avoid estimating models (using RStan) during tests, with the goal of rendering
@@ -7,7 +19,7 @@
   [r-release-osx-x86_64](https://www.r-project.org/nosvn/R.check/r-release-osx-x86_64/dgo-00check.html)
   build.
 
-## 0.2.9
+## dgo 0.2.9
 
 * Switch from compiling Stan models at install time to compiling them at
   runtime, avoiding an Rcpp module issue.
@@ -20,7 +32,7 @@
 * Argument `by` to `get_n()` and `get_item_n()` methods properly accepts a
   vector of variable names when combined with `aggregate` arguments.
 
-## 0.2.8
+## dgo 0.2.8
 
 * Improve Stan models for shorter run times
 * Add `dgmrp()` for fitting single-issue MRP models with hierarchical covariates
@@ -30,7 +42,7 @@
   `dgo_fit` class
 * Bugfixes
 
-## 0.2.7
+## dgo 0.2.7
 
 * Package renamed dgo: Dynamic Estimation of Group-level Opinion
 * Tweaks to pass CRAN checks: clean up examples and docs
@@ -39,12 +51,12 @@
 * Fix Rcpp module issue from 0.2.6 (`Error in .doLoadActions(where, attach)`)
 * Export `expand_rownames()`
  
-## 0.2.6
+## dgo 0.2.6
 
 * Fix error in `dgirt_plot`
 * Fix path in `tools/make_cpp.R`
 
-## 0.2.5
+## dgo 0.2.5
 
 * `group_names` is no longer required. If omitted, the geographic variable given
   by `geo_name` will define groups.

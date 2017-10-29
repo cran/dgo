@@ -2,16 +2,16 @@
 % Please edit documentation in R/shape.r
 \name{shape}
 \alias{shape}
-\title{\code{shape}: prepare data for modeling with \code{dgirt} or \code{dgmrp}}
+\title{Prepare data for modeling}
 \usage{
-shape(item_data, item_names, time_name, geo_name, group_names = NULL,
-  id_vars = NULL, time_filter = NULL, geo_filter = NULL,
-  min_t_filter = 1L, min_survey_filter = 1L, survey_name = NULL,
-  modifier_data = NULL, modifier_names = NULL, t1_modifier_names = NULL,
-  standardize = TRUE, target_data = NULL, raking = NULL,
-  weight_name = NULL, proportion_name = "proportion",
-  aggregate_data = NULL, aggregate_item_names = NULL,
-  constant_item = TRUE, ...)
+shape(item_data = NULL, item_names = NULL, time_name, geo_name,
+  group_names = NULL, id_vars = NULL, time_filter = NULL,
+  geo_filter = NULL, min_t_filter = 1L, min_survey_filter = 1L,
+  survey_name = NULL, modifier_data = NULL, modifier_names = NULL,
+  t1_modifier_names = NULL, standardize = TRUE, target_data = NULL,
+  raking = NULL, max_raked_weight = NULL, weight_name = NULL,
+  proportion_name = "proportion", aggregate_data = NULL,
+  aggregate_item_names = NULL, constant_item = TRUE, ...)
 }
 \arguments{
 \item{item_data}{A table in which items appear in columns and each row
@@ -65,6 +65,10 @@ geographic area and time period. See details below.}
 \item{raking}{A formula or list of formulas specifying the variables on which
 to rake survey weights.}
 
+\item{max_raked_weight}{A maximum over which raked weights will be trimmed.
+Only applied after raking. To trim unraked weights, manipulate the input data
+directly.}
+
 \item{weight_name}{A variable giving survey weights.}
 
 \item{proportion_name}{The variable giving population proportions
@@ -98,7 +102,9 @@ Individual-level data giving item responses is expected as argument
 give the names of variables in \code{item_data} that indicate time period and
 local geographic area. Optional argument \code{group_names} gives other
 respondent characteristics to be modeled. \code{item_data} is optional if
-argument \code{aggregate_data} is used.
+argument \code{aggregate_data} is used. Note that the \code{dgirt()} model
+assumes consistent coding of the polarity of item responses for
+identification.
 }
 
 \section{Modifier Data}{
@@ -130,11 +136,15 @@ consistently with the transformations applied during the aggregation by
 
 Use argument \code{target_data} to adjust the weighting of groups toward
 population targets via raking, using an adaptation of
-\code{\link[survey]{rake}}. To adjust individual survey weights in
+\code{\link[survey]{rake}}. To adjust existing survey weights in
 \code{item_data}, provide argument \code{weight_name}. Otherwise,
 observations in \code{item_data} will be assigned equal starting weights.
-Argument \code{raking} defines strata. Argument \code{proportion_name}
-is optional.
+Argument \code{raking} defines strata. If you pass it a list of formulas like
+\code{list(~ x, ~ y)}, raking is first over \code{x}, then over \code{y}.
+Given an additive formula like \code{~ x + y}, raking is over the
+combinations of \code{x} and \code{y}. So, \code{list(~ x, ~ y + z)} is first
+over \code{x}, then over \code{y}-\code{z} pairs. Argument
+\code{proportion_name} is optional.
 }
 
 \section{Restrictions}{
