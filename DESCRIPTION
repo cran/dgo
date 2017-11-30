@@ -1,7 +1,7 @@
 Package: dgo
 Title: Dynamic Estimation of Group-Level Opinion
-Version: 0.2.11
-Date: 2017-10-26
+Version: 0.2.12
+Date: 2017-11-13
 Description: Fit dynamic group-level IRT and MRP models from individual or
     aggregated item response data. This package handles common preprocessing
     tasks and extends functions for inspecting results, poststratification, and
@@ -32,9 +32,9 @@ Collate: 'aggregate_item_responses.r' 'assertions.r' 'class-control.r'
         'validate_input_data.r'
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2017-10-29 01:17:46 UTC; james
+Packaged: 2017-11-30 02:24:20 UTC; james
 Author: James Dunham [aut, cre],
   Devin Caughey [aut],
   Christopher Warshaw [aut]
 Repository: CRAN
-Date/Publication: 2017-10-29 17:58:43 UTC
+Date/Publication: 2017-11-30 20:38:18 UTC
