@@ -1,6 +1,6 @@
-3a5a093646f34133cb2e2fd586b56571 *DESCRIPTION
+d315fabbe6eac3fa9ab265545e46d340 *DESCRIPTION
 0ee39219f37ed8d9a30f5822dab73a9c *NAMESPACE
-a2017139109cf8699413217c9e225e78 *NEWS.md
+032782f832478bab8caf562c5a1c9407 *NEWS.md
 fd14434739e9fe02a95b6305dd337755 *R/aggregate_item_responses.r
 28ce7cc07aa9d0aee6bd52589f12e8c0 *R/assertions.r
 0878d9da10960f065f9ca67cd99485fb *R/class-control.r
@@ -22,15 +22,15 @@ ba37e9594770a68f8d490eee7569da9c *R/package.R
 9c7530c4816e3af5aa2c405b50dcaed2 *R/restrict_input_data.r
 9363a18aa940cee67f49af8bd4ce0774 *R/reweight_item_responses.r
 c799ed088a1727bcb0485f37194c7868 *R/shape.r
-c14540d8d27ee67c2861e7422f5e8842 *R/shape_hierarchical.r
+fbbfacc61abce664195a3ba08560a813 *R/shape_hierarchical.r
 e116549573372c2a59a75d3e10238799 *R/toy_dgirt_in.r
 e289833b057ec6ddf371a37a96a3f174 *R/toy_dgirtfit.r
 a4cfe96f939fa0445e9a850fcc563ea1 *R/validate_dgirtIn.r
 e8ab3fbcd1b844284e870e9f3fae699c *R/validate_input_data.r
 20b70aed79341acf151580e25d8f31bb *README.md
 fdf1b5a4877bd48315f04c09819664ed *data/datalist
-336e927c36a7f92d793e1b267bcfb6f2 *data/toy_dgirt_in.rda
-5962c9b03c8350afc5b5626102ec6b2b *data/toy_dgirtfit.rda
+397045b315eebe4e279e5c6c9c2cff6a *data/toy_dgirt_in.rda
+097672333342fad6b6aaf1d8d463d945 *data/toy_dgirtfit.rda
 2a2445ed7c01355176546521b11aa2ae *inst/dgirt_details.pdf
 6ea6fb3f26460d92ccd70816c7806e33 *inst/models/2017_01_04.stan
 5c86d7ae815f118608c4b63633dfbae4 *inst/models/2017_01_04_singleissue.stan
@@ -52,8 +52,8 @@ ddb35d2d825bbcdfbc247fcc2ab24c38 *man/toy_dgirtfit.Rd
 6ecaab97ee6803b1d664e3b2cff15862 *tests/testthat/d_agg_s_vec.Rds
 4b5c2772c6f1e0b6ae5c8392379b772f *tests/testthat/d_min_n_vec.Rds
 58609a4241eab7a80ddc150281582262 *tests/testthat/d_min_s_vec.Rds
-d3a9399875e5652cc4b3962778d0c9e5 *tests/testthat/dgirt_ret.Rds
-3cff7d79a6042b9810ead68280963ac1 *tests/testthat/dgmrp_ret.Rds
+1f6355e7089f042a60ac78e91678fa35 *tests/testthat/dgirt_ret.Rds
+b0cc487ee02e7906caf864b2d899525b *tests/testthat/dgmrp_ret.Rds
 a68f0f8d9c52a4949090ade0f3884cbb *tests/testthat/setup.r
 58cab57faa481e1011b30cb9c76b2da4 *tests/testthat/test-assertions.r
 6e6f4dd180d5b8ecb17bc165a7be7bef *tests/testthat/test-defaults.r
@@ -71,7 +71,7 @@ b49e614d7c2f4e3cb4c81fd6a50031e7 *tests/testthat/test-plot.r
 f5e93d04063f00802a94670fb7039405 *tests/testthat/test-shape_misc.r
 334c4ba8795dbeb7ad74d13e05ea5ccb *tests/testthat/test-types.r
 bf2ccd4e92da6b9cf081de73a52ce672 *tests/testthat/test-varnames.r
-471f15f48e02eefedb5459269b6f2927 *tests/testthat/test-zz.r
+99ad54769ab0799d456c1da0fea5c182 *tests/testthat/test-zz.r
 202008a0695aab433a0becffaaba8a21 *tests/testthat/user-version.stan
 bee60323596f70958f38abf0f1d69567 *tools/example_objects.R
 6ff8845b18e2032b579fa38fc94e7c5a *tools/test_objects.R
