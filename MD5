@@ -1,6 +1,6 @@
-d315fabbe6eac3fa9ab265545e46d340 *DESCRIPTION
+0cdb87ce2e6dddffa80bd87f4dbcd883 *DESCRIPTION
 0ee39219f37ed8d9a30f5822dab73a9c *NAMESPACE
-032782f832478bab8caf562c5a1c9407 *NEWS.md
+5d243421632fdbc81e728ad5e6e3b1fa *NEWS.md
 fd14434739e9fe02a95b6305dd337755 *R/aggregate_item_responses.r
 28ce7cc07aa9d0aee6bd52589f12e8c0 *R/assertions.r
 0878d9da10960f065f9ca67cd99485fb *R/class-control.r
@@ -27,7 +27,7 @@ e116549573372c2a59a75d3e10238799 *R/toy_dgirt_in.r
 e289833b057ec6ddf371a37a96a3f174 *R/toy_dgirtfit.r
 a4cfe96f939fa0445e9a850fcc563ea1 *R/validate_dgirtIn.r
 e8ab3fbcd1b844284e870e9f3fae699c *R/validate_input_data.r
-20b70aed79341acf151580e25d8f31bb *README.md
+fdd6aad2261c5bf101364a4fedf3c117 *README.md
 fdf1b5a4877bd48315f04c09819664ed *data/datalist
 397045b315eebe4e279e5c6c9c2cff6a *data/toy_dgirt_in.rda
 097672333342fad6b6aaf1d8d463d945 *data/toy_dgirtfit.rda
@@ -66,7 +66,7 @@ c07ce6a17919feb7607dfb387b0f64a4 *tests/testthat/test-dichotomize.r
 710f9fb29135a0b7702df5a31a46d8ce *tests/testthat/test-ns_vec.r
 b49e614d7c2f4e3cb4c81fd6a50031e7 *tests/testthat/test-plot.r
 2aace7632604b84921f5122b7408fd3b *tests/testthat/test-poststratify.r
-93b05d86d11620450f0ea4df6d4d60e2 *tests/testthat/test-raking.r
+59f1908db772ade7422d6b870946b72d *tests/testthat/test-raking.r
 873ae8dff412330c6be40ff6c3a76eb8 *tests/testthat/test-restrict.r
 f5e93d04063f00802a94670fb7039405 *tests/testthat/test-shape_misc.r
 334c4ba8795dbeb7ad74d13e05ea5ccb *tests/testthat/test-types.r
