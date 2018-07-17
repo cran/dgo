@@ -1,7 +1,7 @@
 Package: dgo
 Title: Dynamic Estimation of Group-Level Opinion
-Version: 0.2.14
-Date: 2017-12-20
+Version: 0.2.15
+Date: 2018-07-16
 Description: Fit dynamic group-level item response theory (IRT) and multilevel
     regression and poststratification (MRP) models from item response data. dgo
     models latent traits at the level of demographic and geographic groups,
@@ -23,7 +23,7 @@ Depends: dgodata, R (>= 3.2.2), rstan (>= 2.15.1)
 LazyData: true
 Imports: assertthat, data.table, ggplot2, lubridate, methods, R6,
         survey
-Suggests: knitr, rmarkdown, testthat
+Suggests: knitr, reshape2, rmarkdown, testthat
 Collate: 'aggregate_item_responses.r' 'assertions.r' 'class-control.r'
         'class-dgo_fit.r' 'class-dgirt_fit.r' 'constants.r'
         'class-dgirtin.r' 'class-dgmrp_fit.r' 'dgirt.r'
@@ -35,10 +35,10 @@ Collate: 'aggregate_item_responses.r' 'assertions.r' 'class-control.r'
         'toy_dgirt_in.r' 'toy_dgirtfit.r' 'validate_dgirtIn.r'
         'validate_input_data.r'
 RoxygenNote: 6.0.1
-NeedsCompilation: no
-Packaged: 2017-12-21 14:56:17 UTC; james
+NeedsCompilation: yes
+Packaged: 2018-07-17 11:56:36 UTC; james
 Author: James Dunham [aut, cre],
   Devin Caughey [aut],
   Christopher Warshaw [aut]
 Repository: CRAN
-Date/Publication: 2017-12-22 18:49:48 UTC
+Date/Publication: 2018-07-17 12:20:04 UTC
